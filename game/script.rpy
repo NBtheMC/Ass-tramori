@@ -6,6 +6,9 @@
 define to = Character("Tony", who_color="#769c69")
 define ti = Character("Tina")
 
+define audio.masks = "audio/MasksRequired.wav"
+define audio.tsunderion = "audio/Tsunderion_v2.wav"
+
 define pc = Character("Me")
 
 transform midright:
@@ -23,11 +26,13 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    # scene bg room
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
+
+    play music masks
 
     "It’s only been a few days since I moved to the city, but I’d be lying if I said I was enjoying it."
 
@@ -65,7 +70,7 @@ label start:
     ti "What’s that Tony? A new contender? Ooh, it will be fun to watch them try to reach the leaderboard. "
 
     "Narrator" "While Tony slithers away into the shadows, Tina squeezes herself underneath an arcade cabinet across from the Assterion cabinet."
-    
+
     "Narrator" "The words “Asstramori” are scratched out at the top of the cabinet, replaced by an etching saying “TINA’S SECRET DEN.” Tina slowly watches the new player’s every movement."
 
     "Narrator" "Tony peeks his head around a dark corner, making sure not to be seen."
@@ -92,7 +97,7 @@ label start:
     ti "I don’t know. I lost count."
 
     to "It’s a bit concerning, ain’t it? This person looks like they’re in college. That’s probably ramen money they've been pouring into the machine all this time."
-    
+
     to "And to be honest, I’m kind of getting annoyed seeing them die at the same spot every time. You’d think they’d learn by now."
 
     ti "Should we stop them?"
@@ -244,7 +249,7 @@ label start:
     ti "Yeah, can we make it up to you somehow?"
 
     pc "Hm…"
-    
+
     pc "How about a date?"
 
     to "…Huh?"
@@ -295,7 +300,7 @@ menu:
 
     "Tina. Tina. Tina? I pick Tina. Tinnaaaaaaa":
         pc "Tina, I guess…"
-        
+
         ti "Yay! This is going to be so much fun."
 
         to "Ah well, have fun you two. I’m going to find some other players to mess with."
@@ -312,7 +317,7 @@ menu:
 
         jump act3
 
-    
+
     "Tony. Yiss, Tony. Tony is good. Tony is life.":
         pc "Tony, I guess…"
 
