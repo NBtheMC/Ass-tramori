@@ -8,6 +8,12 @@ define ti = Character("Tina")
 
 define pc = Character("Me")
 
+transform midright:
+    xalign 0.7
+
+transform midleft:
+    xalign 0.3
+
 
 # The game starts here.
 
@@ -28,6 +34,7 @@ label start:
     "After spending all of my time being bored out of my mind in my room, I reluctantly decided to check out the area looking for something interesting."
 
     scene bg arcade
+    with fade
 
     "After some stumbling around, I came across this neat arcade. I look through the window. Pink neon lights, fuzzy carpeting, and a shadowy, harrowing atmosphere. Perfect vibe for an arcade."
 
@@ -75,6 +82,256 @@ label start:
 
     "Tony/Tina" "Oh no."
 
-    # This ends the game.
+    scene bg arcade
+    with fade
+
+    pc "Gosh dangit!"
+
+    to "Jeez, how many quarters is that now?"
+
+    ti "I don’t know. I lost count."
+
+    to "It’s a bit concerning, ain’t it? This person looks like they’re in college. That’s probably ramen money they've been pouring into the machine all this time."
+    
+    to "And to be honest, I’m kind of getting annoyed seeing them die at the same spot every time. You’d think they’d learn by now."
+
+    ti "Should we stop them?"
+
+    to "Maybe… Wait, I have an idea!"
+
+    ti "Oh?"
+
+    to "Check this out!"
+
+    pc "H-Huh? What’s going on?"
+
+    pc "WHY ARE THE CONTROLS SUDDENLY INVERTED!?"
+
+    "Narrator" "While in the middle of your game, you suddenly find that the game’s controls aren’t responding the way they’re supposed to. Left has become right, up has become down, and vice versa."
+
+    "Narrator" "Naturally, this led to a lot of swearing and frustration."
+
+    pc "How the fuck am I supposed to-"
+
+    pc "Aaaand I died."
+
+    pc "{i}*sigh*{/i} Maybe I should take a break. There’s a bunch of other games I haven’t tried yet."
+
+    ti "Guess that was the final nail in the coffin for them, huh."
+
+    to "Heh heh, that was kinda fun actually."
+
+    ti "Should we follow them? I kind of want to mess around with them a bit."
+
+    to "You read my mind. Come on, let’s see where they scurried off to."
+
+    pc "Let’s see… Oh hey, this one looks kinda cute!"
+
+    "Narrator" "Having spotted from the corner of your eye some sort of farming inspired rhythm game, you find yourself drawing quarters from your pockets once again."
+
+    pc "Ah, this is a nice change of pace. No bullshit inverted controls to fuck me over this time."
+
+    ti "Oh, you poor soul…"
+
+    to "Care to do the honors?"
+
+    ti "Mhm, I already have something in mind for this one."
+
+    pc "Looks like the level is almost, and I haven’t missed a single note."
+
+    pc "Heh, guess i’m just that much of a ga-"
+
+    pc "W-Wha? Did the game just freeze?"
+
+    pc "Come on! I was so close to the finish!"
+
+    "Narrator" "You frantically mash the buttons on the arcade machine, but to no avail. But then, something strange suddenly starts happening."
+
+    pc "T-The notes… they’re moving backwards! And the music..."
+
+    "Narrator" "Taking a step back from the machine, you stare in horror at the screen as the eerie sound of music being played in reverse fills their ears."
+
+    to "Not bad, but I think we can take it a step further."
+
+    pc "God, what is it with all the games in this arcade? Are they all haunted or something?"
+
+    ti "Uh oh, I think they’re onto us."
+
+    to "Nah, don’t worry. They’ll never suspect that there are two funny little dudes living in a bunch of arcade machines."
+
+    ti "True. Afterall, it’s been quite a while since we’ve last made our presence known to a person."
+
+    to "Here, let’s turn off the lights. That’ll really send ‘em."
+
+    ti "Oh, I don’t know, I think that might be going a bit too-"
+
+    pc "EEK!"
+
+    pc "W-WHY DID THE LIGHTS TURN OFF!?"
+
+    pc "OH GOD OH FUCK THIS PLACE REALLY IS A CREEPYPASTA AINT IT."
+
+    ti "What’s a creepypasta?"
+
+    to "Some kind of halloween themed pasta i’m sure."
+
+    pc "AAAAGHGGHOIARNGAAOPSEHRN"
+
+    ti "Oh dear, they seem to be in quite a frenzy."
+
+    to "Yeah."
+
+    to "…Huh, maybe we went a bit too far."
+
+    pc "I WANT TO GO HOME. I WANT TO GO GO HOME. I WANT TO HOME."
+
+    ti "Oh no, I think they’re on the verge of crying."
+
+    to "Oops."
+
+    ti "Here, I’ll turn the lights back on."
+
+    pc "Oh… oh thank god, the lights are back…"
+
+    pc "I-I’m getting out of this place! I’m filing a complaint first thing in the morning."
+
+    to "Gee, I kind of feel bad now…"
+
+    ti "Perhaps we should apologize?"
+
+    to "Won’t that make things worse? I’m sure they might just pass out from the shock."
+
+    to "I mean… look at us."
+
+    ti "Oh I’m sure it’ll be fine. They’ll get over it once we explain ourselves."
+
+    show tina at midright
+
+    "..."
+
+    ti "Hello!"
+
+    pc "{i}*Incomprehensible screaming*{/i}"
+
+    show tony at midleft
+
+    to "Hey hey, relax! We’re not out here to hurt you."
+
+    pc "What the hell is wrong with this town!?"
+
+    ti "Now now, I’m sure we aren’t the type of creatures you’re used to looking at, but I assure you, we mean no harm."
+
+    pc "R-Really?"
+
+    to "Indeed, we usually don’t make our presence known, but we felt the need to apologize."
+
+    pc "Apologize? Apologize for what?"
+
+    ti "All the weird glitches you noticed earlier? Well… that was our doing."
+
+    pc "I… I see."
+
+    pc "..."
+
+    pc "Well, in hindsight, I guess it was kinda funny."
+
+    ti "Oh that’s so good to hear? We were worried you might’ve been traumatized."
+
+    pc "Well, you were certainly getting there."
+
+    to "We might have gone a bit too far there at the end. Sorry about that."
+
+    ti "Yeah, can we make it up to you somehow?"
+
+    pc "Hm…"
+    
+    pc "How about a date?"
+
+    to "…Huh?"
+
+    ti "Excuse me?"
+
+    pc "Sorry, weird question. Forget I asked."
+
+    to "Um…"
+
+    ti "What’s a date?"
+
+    pc "What?"
+
+    to "By date, you’re not talking about the thing used to mark time, right?"
+
+    pc "Oh."
+
+    pc "You two really don’t know what a date is?"
+
+    ti "Not the date you’re speaking of, it seems."
+
+    pc "…Huh. Didn’t think I would ever have to explain this but…"
+
+    pc "…"
+
+    pc "Well, it’s basically when two people hang out together and… do stuff."
+
+    ti "What kind of stuff?"
+
+    pc "Anything, really. So long as the two of you bond over it and get to know each other somehow."
+
+    to "I see. I’m afraid neither of us can leave the arcade though."
+
+    pc "That’s fine. We can just… check out the games I guess."
+
+    ti "But, you said that a date is an act between two people, correct?"
+
+    to "Then that means…"
+
+    ti "There can only be one…"
+
+    pc "Uh, yeah. Although when you say it like that, it sounds a bit ominous."
+
+    to "So, which one of us will it be?"
+
+menu:
+
+    "Tina. Tina. Tina? I pick Tina. Tinnaaaaaaa":
+        pc "Tina, I guess…"
+        
+        ti "Yay! This is going to be so much fun."
+
+        to "Ah well, have fun you two. I’m going to find some other players to mess with."
+
+        hide tony
+        with dissolve
+
+        show tina at center
+        with moveinright
+
+        ti "Bye!"
+
+        pc "{i}As if today couldn’t get any weirder… and now i’m here taking a funny moth woman on a date…{/i}"
+
+        jump act3
+
+    
+    "Tony. Yiss, Tony. Tony is good. Tony is life.":
+        pc "Tony, I guess…"
+
+        to "Heck yeah! We’re gonna have a great time together, I promise you."
+
+        ti "Ah well, have fun you two. I’m going to find some other players to mess with."
+
+        hide tina
+        with dissolve
+
+        show tony at center
+        with moveinleft
+
+        to "Have fun!"
+
+        pc "{i}As if today couldn’t get any weirder… and now i’m here taking a funny skeleton man on a date…{/i}"
+
+        jump act3
+
+label act3:
 
     return
