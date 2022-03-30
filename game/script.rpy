@@ -6,8 +6,8 @@
 define to = Character("Tony", who_color="#769c69")
 define ti = Character("Tina")
 
-define audio.masks = "audio/MasksRequired.wav"
-define audio.tsunderion = "audio/Tsunderion_v2.wav"
+define audio.masks = "audio/MasksRequired.mp3"
+define audio.tsunderion = "audio/Tsunderion_v2.mp3"
 
 define pc = Character("Me")
 
@@ -402,22 +402,22 @@ label act3:
         ti "Gosh, you’re so sweet! Hm…how about those stuffed animals over there?"
     else:
         to "Ah, I’m usually not that picky…maybe one of those stuffed animals?"
-    
+
     pc "Sure! Let’s see…"
 
     if tina:
         "You insert a quarter into the claw machine. Aiming for the stuffed animal, you press the button, the claw descending upon a pile of prizes."
-        
+
         "Tina leans close to you, as you both watch the claw grab onto your desired prize! By some miracle, it doesn’t let go, and the celebratory lights fill the room, reflecting in Tina’s twinkling eyes."
 
         ti "WHAAAT? How did you get it on the first try!?"
     else:
         "You insert a quarter into the claw machine. Aiming for the stuffed animal, you press the button, the claw descending upon a pile of prizes."
-        
+
         "Tony leans close to you, as you both watch the claw grab onto your desired prize! By some miracle, it doesn’t let go, and the celebratory lights fill the room, reflecting in Tony’s twinkling eyes."
 
         to "Dang, you got it on the first try? Guess I’m not much of a gamer…"
-    
+
     pc "Heh, it’s just beginner's luck."
 
     c "Wow…well, thank you!"
