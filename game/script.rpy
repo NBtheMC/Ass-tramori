@@ -311,6 +311,10 @@ menu:
         show tina at center
         with moveinright
 
+        $ c = ti
+
+        $ tina = True
+
         ti "Bye!"
 
         pc "{i}As if today couldn’t get any weirder… and now i’m here taking a funny moth woman on a date…{/i}"
@@ -331,6 +335,10 @@ menu:
         show tony at center
         with moveinleft
 
+        $ tina = False
+
+        $ c = to
+
         to "Have fun!"
 
         pc "{i}As if today couldn’t get any weirder… and now i’m here taking a funny skeleton man on a date…{/i}"
@@ -338,5 +346,93 @@ menu:
         jump act3
 
 label act3:
+
+    pc "Well, you mind showing me around? I bet you know all kinds of cool secrets about this place, right?"
+
+    c "Oh uhm…yeah sure. There’s no reason to hide from you anymore, so…"
+
+    if tina:
+        pc "Oh my…your antennae are lovely…"
+    else:
+        pc "Oh my…your antlers are lovely…"
+
+    c "Ah…th-thanks…"
+
+    pc "Hey, now that I can see you more clearly…do I know you from somewhere?"
+
+    pc "Wait a minute…you’re in that game that I was playing just now, right? Assterion?"
+
+    if tina:
+        ti "Well, I was going to be…but I dipped out of it! I don’t really have the stomach for horror stuff, you know? …Guess that’s a little strange, huh?"
+    else:
+        to "Yeah…that was just an acting gig though. There’s not a lot of work out there for someone like me, so I take what I can get. I promise, I’m really not that scary of a guy."
+
+    pc "That makes sense. You don’t really strike me as that kind of…person? Monster…?"
+
+    c "Monster is just fine!"
+
+    pc "Cool! Thanks for letting me know."
+
+    c "Hm…so you wanted to see some secrets, yeah? There’s a hidden hall down this way with a few machines at the end. Want me to show you the way?"
+
+    pc "Yeah! That sounds cool."
+
+    c "Alright! Here, take my hand. It’s dark in there, so I just want to make sure you don’t fall and hurt yourself."
+
+    pc "Th…thanks…"
+
+    scene bg claw
+    if tina:
+        show tina
+    else:
+        show tony
+    with fade
+
+    pc "Oh wow! These claw machines are awesome!"
+
+    c "Ah yeah…I’m no good at these ones though. I’ve never been able to get any of the big prizes."
+
+    pc "Well, do you want one?"
+
+    c "Oh I mean…sure! But how?"
+
+    pc "I wouldn’t say I’m too good at these either, but if it’s for you, I’ll definitely try my best to win you something! Which prize would you like?"
+
+    if tina:
+        ti "Gosh, you’re so sweet! Hm…how about those stuffed animals over there?"
+    else:
+        to "Ah, I’m usually not that picky…maybe one of those stuffed animals?"
+    
+    pc "Sure! Let’s see…"
+
+    if tina:
+        "You insert a quarter into the claw machine. Aiming for the stuffed animal, you press the button, the claw descending upon a pile of prizes."
+        
+        "Tina leans close to you, as you both watch the claw grab onto your desired prize! By some miracle, it doesn’t let go, and the celebratory lights fill the room, reflecting in Tina’s twinkling eyes."
+
+        ti "WHAAAT? How did you get it on the first try!?"
+    else:
+        "You insert a quarter into the claw machine. Aiming for the stuffed animal, you press the button, the claw descending upon a pile of prizes."
+        
+        "Tony leans close to you, as you both watch the claw grab onto your desired prize! By some miracle, it doesn’t let go, and the celebratory lights fill the room, reflecting in Tony’s twinkling eyes."
+
+        to "Dang, you got it on the first try? Guess I’m not much of a gamer…"
+    
+    pc "Heh, it’s just beginner's luck."
+
+    c "Wow…well, thank you!"
+
+    pc "No problem! I barely noticed while having all this fun with you, but it’s getting pretty late. I should get going soon."
+
+    c "You know…usually I don’t enjoy visitors, so I try and scare them away…but you’re free to come back whenever you’d like."
+
+    pc "In that case, I think you’ll be seeing a lot of me. I’ll stop by again tomorrow, see you then!"
+
+    if tina:
+        ti "Hehe, I had a lot of fun today! I gotta get this place cleaned up before the human comes tomorrow!"
+
+        ti "…it’s not like I like them or anything though…"
+    else:
+        to "Hm…that human wasn’t half bad. I hope they come by often…"
 
     return
