@@ -2,7 +2,6 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
 define to = Character("Tony", who_color="#769c69")
 define ti = Character("Tina")
 
@@ -12,10 +11,34 @@ define audio.tsunderion = "audio/Tsunderion_v2.mp3"
 image tina normal = "images/Tina_1.png"
 image tina upset = "images/Tina_2.png"
 image tina blush = "images/Tina_3.png"
+image tina inactive_normal = im.MatrixColor(
+    "images/Tina_1.png",
+    im.matrix.tint(0.45, 0.45, 0.75)
+    *im.matrix.brightness(-0.07))
+image tina inactive_upset = im.MatrixColor(
+    "images/Tina_2.png",
+    im.matrix.tint(0.45, 0.45, 0.75)
+    *im.matrix.brightness(-0.07))
+image tina inactive_blush = im.MatrixColor(
+    "images/Tina_3.png",
+    im.matrix.tint(0.45, 0.45, 0.75)
+    *im.matrix.brightness(-0.07))
 
 image tony up = "images/Tony_1.png"
 image tony down = "images/Tony_2.png"
 image tony normal = "images/Tony_3.png"
+image tony inactive_up = im.MatrixColor(
+    "images/Tony_1.png",
+    im.matrix.tint(0.45, 0.45, 0.75)
+    *im.matrix.brightness(-0.07))
+image tony inactive_down = im.MatrixColor(
+    "images/Tony_2.png",
+    im.matrix.tint(0.45, 0.45, 0.75)
+    *im.matrix.brightness(-0.07))
+image tony inactive_normal = im.MatrixColor(
+    "images/Tony_3.png",
+    im.matrix.tint(0.45, 0.45, 0.75)
+    *im.matrix.brightness(-0.07))
 
 define pc = Character("Me")
 
@@ -46,7 +69,7 @@ label start:
 
     "After spending all of my time being bored out of my mind in my room, I reluctantly decided to check out the area looking for something interesting."
 
-    scene bg arcade
+    scene bg arcade nofilter
     with fade
 
     "After some stumbling around, I came across this neat arcade. I look through the window. Pink neon lights, fuzzy carpeting, and a shadowy, harrowing atmosphere. Perfect vibe for an arcade."
@@ -58,12 +81,20 @@ label start:
     "The screen changes to a large, blinking “INSERT COIN,” so I head over to the coin machine on the other side of the room. I insert a dollar and get some quarters."
 
     show tina normal at left
+    with dissolve
 
     ti "Hm, what’s this? Oh great, someone found their way in here. Well, it’ll be fun scaring them outta here at least. {p}{i}ehehe{/i}"
 
+    hide tina normal
+    show tina inactive_normal at left
+
     show tony down at right
+    with dissolve
 
     to "Tina, what the hell is that noise? Don’t tell me… another guest? {w} {i}Sigh{/i}. {w} It’s been a few years since the last one. Can’t people give me some privacy? I just need to think of a way to get them out of here…"
+
+    hide tony down
+    show tony inactive_down at right
 
     "Okay… here we go. {w} Gamer Time."
 
@@ -99,7 +130,7 @@ label start:
 
     "Tony/Tina" "Oh no."
 
-    scene bg arcade
+    scene bg arcade no filter
     with fade
 
     pc "Gosh dangit!"

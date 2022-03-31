@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 12: invalid syntax
-    "images/Tina_1.png" zoom .75
-                            ^
+File "game/script.rpy", line 5: invalid syntax
+    define to = Character("Tony", who_color="#769c69")
+             ^
+    
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Wed Mar 30 23:03:21 2022
+Thu Mar 31 15:15:29 2022
