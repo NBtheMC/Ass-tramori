@@ -9,13 +9,21 @@ define ti = Character("Tina")
 define audio.masks = "audio/MasksRequired.mp3"
 define audio.tsunderion = "audio/Tsunderion_v2.mp3"
 
+image tina normal = "images/Tina_1.png"
+image tina upset = "images/Tina_2.png"
+image tina blush = "images/Tina_3.png"
+
+image tony up = "images/Tony_1.png"
+image tony down = "images/Tony_2.png"
+image tony normal = "images/Tony_3.png"
+
 define pc = Character("Me")
 
 transform midright:
-    xalign 0.7
+    xalign 1
 
 transform midleft:
-    xalign 0.3
+    xalign -1
 
 
 # The game starts here.
@@ -49,7 +57,11 @@ label start:
 
     "The screen changes to a large, blinking “INSERT COIN,” so I head over to the coin machine on the other side of the room. I insert a dollar and get some quarters."
 
+    show tina normal at left
+
     ti "Hm, what’s this? Oh great, someone found their way in here. Well, it’ll be fun scaring them outta here at least. {p}{i}ehehe{/i}"
+
+    show tony down at right
 
     to "Tina, what the hell is that noise? Don’t tell me… another guest? {w} {i}Sigh{/i}. {w} It’s been a few years since the last one. Can’t people give me some privacy? I just need to think of a way to get them out of here…"
 

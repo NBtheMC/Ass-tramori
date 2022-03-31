@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 415: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-            "You insert a quarter into the claw machine. Aiming for the stuffed animal, you press the button, the claw descending upon a pile of prizes.
+File "game/script.rpy", line 12: invalid syntax
+    "images/Tina_1.png" zoom .75
+                            ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Tue Mar 29 20:02:25 2022
+Wed Mar 30 23:03:21 2022
