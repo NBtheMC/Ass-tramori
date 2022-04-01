@@ -43,10 +43,10 @@ image tony inactive_normal = im.MatrixColor(
 define pc = Character("Me")
 
 transform midright:
-    xalign 1
+    xcenter .66
 
 transform midleft:
-    xalign -1
+    xcenter .33
 
 
 # The game starts here.
@@ -65,12 +65,16 @@ label start:
 
     play music masks
 
+    show tina normal at midleft
+    with dissolve
+
     "It’s only been a few days since I moved to the city, but I’d be lying if I said I was enjoying it."
 
     "After spending all of my time being bored out of my mind in my room, I reluctantly decided to check out the area looking for something interesting."
 
     scene bg arcade nofilter
     with fade
+
 
     "After some stumbling around, I came across this neat arcade. I look through the window. Pink neon lights, fuzzy carpeting, and a shadowy, harrowing atmosphere. Perfect vibe for an arcade."
 
@@ -80,21 +84,21 @@ label start:
 
     "The screen changes to a large, blinking “INSERT COIN,” so I head over to the coin machine on the other side of the room. I insert a dollar and get some quarters."
 
-    show tina normal at left
+    show tina normal at midleft
     with dissolve
 
     ti "Hm, what’s this? Oh great, someone found their way in here. Well, it’ll be fun scaring them outta here at least. {p}{i}ehehe{/i}"
 
     hide tina normal
-    show tina inactive_normal at left
+    show tina inactive_normal at midleft
 
-    show tony down at right
+    show tony down at midright
     with dissolve
 
     to "Tina, what the hell is that noise? Don’t tell me… another guest? {w} {i}Sigh{/i}. {w} It’s been a few years since the last one. Can’t people give me some privacy? I just need to think of a way to get them out of here…"
 
     hide tony down
-    show tony inactive_down at right
+    show tony inactive_down at midright
 
     "Okay… here we go. {w} Gamer Time."
 
