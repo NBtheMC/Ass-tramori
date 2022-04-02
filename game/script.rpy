@@ -135,8 +135,8 @@ label start:
 
     "Under my breath, I mutter that I’m determined to keep playing."
 
-    show tina normal
-    show tony down
+    show tina normal at midleft
+    show tony down at midright
 
     "Tony/Tina" "Oh."
 
@@ -154,7 +154,7 @@ label start:
     hide tony down
     with dissolve
 
-    scene bg arcade no filter
+    scene bg arcade nofilter
     with fade
 
     pc "Gosh dangit!"
@@ -184,8 +184,8 @@ label start:
     ti "Should we stop them?"
 
     hide tina normal
-    show tina inactive_normal
-    show tony up
+    show tina inactive_normal at midright
+    show tony up at midleft
 
     to "Maybe… Wait, I have an idea!"
 
@@ -277,7 +277,11 @@ label start:
 
     "Narrator" "You frantically mash the buttons on the arcade machine, but to no avail. But then, something strange suddenly starts happening."
 
+    show tina inactive_blush
+
     pc "T-The notes… they’re moving backwards! And the music..."
+
+    hide tina inactive_blush
 
     "Narrator" "Taking a step back from the machine, you stare in horror at the screen as the eerie sound of music being played in reverse fills their ears."
 
@@ -331,55 +335,117 @@ label start:
 
     ti "What’s a creepypasta?"
 
+    hide tina normal
+    show tina inactive_normal at midleft
+    show tony normal at midright
+
     to "Some kind of halloween themed pasta i’m sure."
+
+    hide tony up
+    show tony inactive_normal at midright
 
     pc "AAAAGHGGHOIARNGAAOPSEHRN"
 
+    hide tina inactive_normal
+    show tina normal at midleft
+
     ti "Oh dear, they seem to be in quite a frenzy."
+
+    hide tina normal
+    show tina inactive_normal at midleft
+    hide tony inactive_normal
+    show tony normal at midright
 
     to "Yeah."
 
     to "…Huh, maybe we went a bit too far."
 
+    hide tony normal
+    show tony inactive_normal at midright
+
     pc "I WANT TO GO HOME. I WANT TO GO GO HOME. I WANT TO HOME."
+
+    hide tony inactive_normal
+    hide tina inactive_normal
+    show tina blush
 
     ti "Oh no, I think they’re on the verge of crying."
 
+    hide tina blush
+    show tony normal
+
     to "Oops."
 
+    hide tony normal
+    show tina normal
+
     ti "Here, I’ll turn the lights back on."
+
+    hide tina normal
 
     pc "Oh… oh thank god, the lights are back…"
 
     pc "I-I’m getting out of this place! I’m filing a complaint first thing in the morning."
 
+    show tony normal at midleft
+
     to "Gee, I kind of feel bad now…"
 
+    hide tony normal
+    show tony inactive_normal at midleft
+    show tina normal at midright
+
     ti "Perhaps we should apologize?"
+
+    hide tina normal
+    show tina inactive_normal at midright
+    hide tony inactive_normal
+    show tony normal at midleft
 
     to "Won’t that make things worse? I’m sure they might just pass out from the shock."
 
     to "I mean… look at us."
 
+    hide tony normal
+    show tony inactive_normal at midleft
+    hide tina inactive_normal
+    show tina normal at midright
+
     ti "Oh I’m sure it’ll be fine. They’ll get over it once we explain ourselves."
 
-    show tina at midright
+    hide tina normal
+    hide tony inactive_normal
+    with dissolve
 
     "..."
+
+    show tina normal at midleft
+    with dissolve
 
     ti "Hello!"
 
     pc "{i}*Incomprehensible screaming*{/i}"
 
-    show tony at midleft
+    show tony up at midright
+    hide tina normal
+    show tina inactive_normal at midleft
 
     to "Hey hey, relax! We’re not out here to hurt you."
+
+    hide tony up
+    show tony inactive_up at midright
 
     pc "What the hell is wrong with this town!?"
 
     ti "Now now, I’m sure we aren’t the type of creatures you’re used to looking at, but I assure you, we mean no harm."
 
+    hide tina inactive_normal
+    show tina normal at midleft
+
     pc "R-Really?"
+
+    hide tina normal
+    show tina inactive_normal at midleft
 
     to "Indeed, we usually don’t make our presence known, but we felt the need to apologize."
 
@@ -472,6 +538,8 @@ menu:
 
         pc "{i}As if today couldn’t get any weirder… and now i’m here taking a funny moth woman on a date…{/i}"
 
+        stop music fadeout 1.0
+
         jump act3
 
 
@@ -496,9 +564,13 @@ menu:
 
         pc "{i}As if today couldn’t get any weirder… and now i’m here taking a funny skeleton man on a date…{/i}"
 
+        stop music fadeout 1.0
+
         jump act3
 
 label act3:
+
+    play music tsunderion
 
     pc "Well, you mind showing me around? I bet you know all kinds of cool secrets about this place, right?"
 

@@ -1,16 +1,16 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 60, in script
-    show tina normal midright
-Exception: Image 'tina normal' does not accept attributes 'midright'.
+  File "game/script.rpy", line 157, in script
+    scene bg arcade no filter
+Exception: Image 'bg arcade' does not accept attributes 'no filter'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 60, in script
-    show tina normal midright
-  File "renpy/ast.py", line 1197, in execute
+  File "game/script.rpy", line 157, in script
+    scene bg arcade no filter
+  File "renpy/ast.py", line 1328, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "renpy/ast.py", line 1167, in show_imspec
     atl=atl)
@@ -22,9 +22,9 @@ Full traceback:
     args.extraneous()
   File "renpy/display/core.py", line 271, in extraneous
     " ".join(self.args),
-Exception: Image 'tina normal' does not accept attributes 'midright'.
+Exception: Image 'bg arcade' does not accept attributes 'no filter'.
 
 Windows-10-10.0.18362
 Ren'Py 7.4.11.2266
 Asterion Fanfic 1.0
-Wed Mar 30 23:01:40 2022
+Fri Apr  1 22:07:31 2022
