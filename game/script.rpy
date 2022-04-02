@@ -308,17 +308,20 @@ label start:
 
     hide tony down
     show tony inactive_down at midright
+    show tina inactive_normal
     show tina normal at midleft
 
     ti "True. Afterall, it’s been quite a while since we’ve last made our presence known to a person."
 
     hide tina normal
     show tina inactive_normal at midleft
+    hide tony inactive_down
     show tony down at midright
 
     to "Here, let’s turn off the lights. That’ll really send ‘em."
 
     hide tony down
+    hide tina inactive_normal
     show tony inactive_down at midright
     show tina normal at midleft
 
@@ -339,6 +342,7 @@ label start:
     ti "What’s a creepypasta?"
 
     hide tina normal
+    hide tony inactive_down
     show tina inactive_normal at midleft
     show tony normal at midright
 
@@ -429,9 +433,9 @@ label start:
 
     pc "{i}*Incomprehensible screaming*{/i}"
 
-    show tony up at midright
     hide tina normal
     show tina inactive_normal at midleft
+    show tony up at midright
 
     to "Hey hey, relax! We’re not out here to hurt you."
 
@@ -624,6 +628,8 @@ menu:
 
         hide tony
         with dissolve
+        hide tina inactive_blush
+        show tina blush
 
         show tina at center
         with moveinright
@@ -651,7 +657,7 @@ menu:
         hide tina
         with dissolve
 
-        show tony at center
+        show tony up at center
         with moveinleft
 
         $ tina = False
