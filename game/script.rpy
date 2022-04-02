@@ -485,6 +485,7 @@ label act3:
         hide tony inactive_down
     
     scene black
+    with fade
 
     show text "Nik Thomas, Parmpreet Gill, Stevie Rodriguez - Writing \n Annie Zhang, Tiana Chamsi - Character Art \n Andrew Dunne - Background Art \n Joshua Augenstein - Programming \n Autumn Moulios - Music" at truecenter
 
