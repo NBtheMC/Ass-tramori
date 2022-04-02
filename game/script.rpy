@@ -62,7 +62,7 @@ label start:
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-
+    
     play music masks
 
     show tina normal at midleft
@@ -134,7 +134,7 @@ label start:
 
     "Tony/Tina" "Oh no."
 
-    scene bg arcade no filter
+    scene bg arcade nofilter
     with fade
 
     pc "Gosh dangit!"
@@ -257,7 +257,7 @@ label start:
 
     ti "Oh I’m sure it’ll be fine. They’ll get over it once we explain ourselves."
 
-    show tina at midright
+    show tina inactive_normal at midright
 
     "..."
 
@@ -265,7 +265,7 @@ label start:
 
     pc "{i}*Incomprehensible screaming*{/i}"
 
-    show tony at midleft
+    show tony inactive_down at midleft
 
     to "Hey hey, relax! We’re not out here to hurt you."
 
@@ -352,10 +352,10 @@ menu:
 
         to "Ah well, have fun you two. I’m going to find some other players to mess with."
 
-        hide tony
+        hide tony inactive_down
         with dissolve
 
-        show tina at center
+        show tina inactive_normal at center
         with moveinright
 
         $ c = ti
@@ -376,10 +376,10 @@ menu:
 
         ti "Ah well, have fun you two. I’m going to find some other players to mess with."
 
-        hide tina
+        hide tina inactive_normal
         with dissolve
 
-        show tony at center
+        show tony inactive_down at center
         with moveinleft
 
         $ tina = False
@@ -430,9 +430,9 @@ label act3:
 
     scene bg claw
     if tina:
-        show tina
+        show tina inactive_blush
     else:
-        show tony
+        show tony inactive_up
     with fade
 
     pc "Oh wow! These claw machines are awesome!"
@@ -479,7 +479,15 @@ label act3:
         ti "Hehe, I had a lot of fun today! I gotta get this place cleaned up before the human comes tomorrow!"
 
         ti "…it’s not like I like them or anything though…"
+        hide tina inactive_blush
     else:
         to "Hm…that human wasn’t half bad. I hope they come by often…"
+        hide tony inactive_down
+    
+    scene black
+
+    show text "Nik Thomas, Parmpreet Gill, Stevie Rodriguez - Writing \n Annie Zhang, Tiana Chamsi - Character Art \n Andrew Dunne - Background Art \n Joshua Augenstein - Programming \n Autumn Moulios - Music" at truecenter
+
+    "Thank you for playing!"
 
     return
