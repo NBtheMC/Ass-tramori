@@ -170,6 +170,7 @@ label start:
     ti "I don’t know. I lost count."
 
     hide tina normal
+    hide tony inactive_down
     show tina inactive_normal at midright
     show tony down at midleft
 
@@ -178,12 +179,14 @@ label start:
     to "And to be honest, I’m kind of getting annoyed seeing them die at the same spot every time. You’d think they’d learn by now."
 
     hide tony down
+    hide tina inactive_normal
     show tony inactive_down at midleft
     show tina normal at midright
 
     ti "Should we stop them?"
 
     hide tina normal
+    hide tony inactive_down
     show tina inactive_normal at midright
     show tony up at midleft
 
@@ -446,12 +449,22 @@ label start:
 
     hide tina normal
     show tina inactive_normal at midleft
+    show tony up at midright
 
     to "Indeed, we usually don’t make our presence known, but we felt the need to apologize."
 
+    hide tony up
+    show tony inactive_up at midright
+
     pc "Apologize? Apologize for what?"
 
+    hide tina inactive_normal
+    show tina upset at midleft
+
     ti "All the weird glitches you noticed earlier? Well… that was our doing."
+
+    hide tina upset
+    show tina inactive_upset at midleft
 
     pc "I… I see."
 
@@ -459,37 +472,88 @@ label start:
 
     pc "Well, in hindsight, I guess it was kinda funny."
 
+    hide tina inactive_upset
+    show tina blush at midleft
+
     ti "Oh that’s so good to hear? We were worried you might’ve been traumatized."
+
+    hide tina blush
+    show tina inactive_blush at midleft
 
     pc "Well, you were certainly getting there."
 
+    hide tony inactive_up
+    show tony down at midright
+
     to "We might have gone a bit too far there at the end. Sorry about that."
 
+    hide tony down
+    show tony inactive_down at midright
+    hide tina inactive_blush
+    show tina normal at midleft
+
     ti "Yeah, can we make it up to you somehow?"
+
+    hide tina normal
+    show tina inactive_normal at midleft
 
     pc "Hm…"
 
     pc "How about a date?"
 
+    hide tina inactive_normal
+    hide tony inactive_down
+    show tony normal at midright
+
     to "…Huh?"
+
+    hide tony normal
+    show tony inactive_normal at midright
+    show tina blush at midleft
 
     ti "Excuse me?"
 
+    hide tina blush
+    show tina inactive_blush at midleft
+
     pc "Sorry, weird question. Forget I asked."
+
+    hide tony inactive_normal
+    show tony normal at midright
 
     to "Um…"
 
+    hide tony normal
+    show tony inactive_normal at midright
+    hide tina inactive_blush
+    show tina blush at midleft
+
     ti "What’s a date?"
+
+    hide tina blush
+    show tina inactive_blush at midleft
 
     pc "What?"
 
+    hide tony inactive_normal
+    show tony normal at midright
+
     to "By date, you’re not talking about the thing used to mark time, right?"
+
+    hide tony normal
+    show tony inactive_normal at midright
 
     pc "Oh."
 
     pc "You two really don’t know what a date is?"
 
+    hide tina inactive_blush
+    show tina blush at midleft
+
     ti "Not the date you’re speaking of, it seems."
+
+    hide tina blush
+    show tina inactive_blush at midleft
 
     pc "…Huh. Didn’t think I would ever have to explain this but…"
 
@@ -497,23 +561,57 @@ label start:
 
     pc "Well, it’s basically when two people hang out together and… do stuff."
 
+    hide tina inactive_blush
+    hide tony inactive_normal
+    show tina blush
+
     ti "What kind of stuff?"
+
+    hide tina blush
+    show tony inactive_normal at midright
+    show tina inactive_blush at midleft
 
     pc "Anything, really. So long as the two of you bond over it and get to know each other somehow."
 
+    hide tony inactive_normal
+    show tony up at midright
+
     to "I see. I’m afraid neither of us can leave the arcade though."
+
+    hide tony up
+    show tony inactive_up at midright
 
     pc "That’s fine. We can just… check out the games I guess."
 
+    hide tina inactive_blush
+    show tina normal at midleft
+
     ti "But, you said that a date is an act between two people, correct?"
+
+    hide tina normal
+    hide tony inactive_up
+    show tony normal
 
     to "Then that means…"
 
+    hide tony normal
+    show tina blush
+
     ti "There can only be one…"
+
+    hide tina blush
+    show tina inactive_blush at midleft
+    show tony inactive_normal at midright
 
     pc "Uh, yeah. Although when you say it like that, it sounds a bit ominous."
 
+    hide tony inactive_normal
+    show tony up at midright
+
     to "So, which one of us will it be?"
+
+    hide tony up
+    show tony inactive_up at midright
 
 menu:
 
