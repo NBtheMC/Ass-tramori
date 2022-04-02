@@ -24,21 +24,21 @@ image tina inactive_blush = im.MatrixColor(
     im.matrix.tint(0.45, 0.45, 0.75)
     *im.matrix.brightness(-0.07))
 
-image tony up = "images/Tony_1.png"
-image tony down = "images/Tony_2.png"
-image tony normal = "images/Tony_3.png"
-image tony inactive_up = im.MatrixColor(
+image tony up = im.Scale("images/Tony_1.png", 1920, 1080)
+image tony down = im.Scale("images/Tony_2.png", 1920, 1080)
+image tony normal = im.Scale("images/Tony_3.png", 1920, 1080)
+image tony inactive_up = im.Scale(im.MatrixColor(
     "images/Tony_1.png",
     im.matrix.tint(0.45, 0.45, 0.75)
-    *im.matrix.brightness(-0.07))
-image tony inactive_down = im.MatrixColor(
+    *im.matrix.brightness(-0.07)), 1920, 1080)
+image tony inactive_down = im.Scale(im.MatrixColor(
     "images/Tony_2.png",
     im.matrix.tint(0.45, 0.45, 0.75)
-    *im.matrix.brightness(-0.07))
-image tony inactive_normal = im.MatrixColor(
+    *im.matrix.brightness(-0.07)), 1920, 1080)
+image tony inactive_normal = im.Scale(im.MatrixColor(
     "images/Tony_3.png",
     im.matrix.tint(0.45, 0.45, 0.75)
-    *im.matrix.brightness(-0.07))
+    *im.matrix.brightness(-0.07)), 1920, 1080)
 
 define pc = Character("Me")
 
@@ -94,11 +94,13 @@ label start:
     to "Tina, what the hell is that noise? Don’t tell me… another guest? {w} {i}Sigh{/i}. {w} It’s been a few years since the last one. Can’t people give me some privacy? I just need to think of a way to get them out of here…"
 
     hide tony down
+    show tony inactive_down at midright
 
     "Okay… here we go. {w} Gamer Time."
 
     hide tony inactive_down
     hide tina inactive_normal
+    with dissolve
 
     "I familiarize myself with the controls. Spin and shoot. Got it. I quickly boost around the screen. Oh there’s the first alien ship! {w} I blast it down, turn the corner, and - BOOM! - straight into another ship. {w} Oops."
 
@@ -106,7 +108,7 @@ label start:
 
     "Okay… a few ships are down. Now’s my chance to make it to the end and - {w} DAMMIT! - one of the larger ships shoots me from behind. {w} That’s fine. I’ll just get more quarters…"
 
-    show tony down at midright
+    show tony down
 
     to "Wow… this new player is… intriguing. Just watching them makes me lost for words…"
 
@@ -115,13 +117,11 @@ label start:
     to "Terrible at Assterion! Maybe I’ll observe them for a bit from the shadows… I could use some entertainment."
 
     hide tony down
-    show tony inactive_down at midright
-    show tina normal at midleft
+    show tina normal
 
     ti "What’s that Tony? A new contender? Ooh, it will be fun to watch them try to reach my high score."
 
     hide tina normal
-    hide tony inactive_down
 
     "Narrator" "While Tony slithers away into the shadows, Tina squeezes herself underneath an arcade cabinet across from the Assterion cabinet."
 
@@ -135,12 +135,13 @@ label start:
 
     "Under my breath, I mutter that I’m determined to keep playing."
 
-
+    show tina normal
+    show tony down
 
     "Tony/Tina" "Oh."
 
     hide tina normal
-    hide tony inactive_down
+    hide tony down
 
     pc "And I WON’T LEAVE UNTIL I MASTER IT!"
 
@@ -188,13 +189,25 @@ label start:
 
     to "Maybe… Wait, I have an idea!"
 
+    hide tina inactive_normal
+    hide tony up
+    show tina normal
+
     ti "Oh?"
 
+    hide tina normal
+    show tony down
+
     to "Check this out!"
+
+    hide tony down
+    show tony inactive_down
 
     pc "H-Huh? What’s going on?"
 
     pc "WHY ARE THE CONTROLS SUDDENLY INVERTED!?"
+
+    hide tony inactive_down
 
     "Narrator" "While in the middle of your game, you suddenly find that the game’s controls aren’t responding the way they’re supposed to. Left has become right, up has become down, and vice versa."
 
@@ -206,13 +219,28 @@ label start:
 
     pc "{i}*sigh*{/i} Maybe I should take a break. There’s a bunch of other games I haven’t tried yet."
 
+    show tina normal at midleft
+
     ti "Guess that was the final nail in the coffin for them, huh."
+
+    hide tina normal
+    show tina inactive_normal at midleft
+    show tony up at midright
 
     to "Heh heh, that was kinda fun actually."
 
+    hide tony up
+    hide tina inactive_normal
+    show tina normal
+
     ti "Should we follow them? I kind of want to mess around with them a bit."
 
+    hide tina normal
+    show tony down
+
     to "You read my mind. Come on, let’s see where they scurried off to."
+
+    hide tony down
 
     pc "Let’s see… Oh hey, this one looks kinda cute!"
 
@@ -220,11 +248,24 @@ label start:
 
     pc "Ah, this is a nice change of pace. No bullshit inverted controls to fuck me over this time."
 
+    show tina normal at midleft
+
     ti "Oh, you poor soul…"
+
+    hide tina normal
+    show tina inactive_normal at midleft
+    show tony up at midright
 
     to "Care to do the honors?"
 
+    hide tony up
+    hide tina inactive_normal
+    show tina normal
+
     ti "Mhm, I already have something in mind for this one."
+
+    hide tina normal
+    with dissolve
 
     pc "Looks like the level is almost, and I haven’t missed a single note."
 
@@ -240,25 +281,53 @@ label start:
 
     "Narrator" "Taking a step back from the machine, you stare in horror at the screen as the eerie sound of music being played in reverse fills their ears."
 
+    show tony up
+
     to "Not bad, but I think we can take it a step further."
+
+    hide tony up
 
     pc "God, what is it with all the games in this arcade? Are they all haunted or something?"
 
+    show tina normal at midleft
+
     ti "Uh oh, I think they’re onto us."
+
+    hide tina normal
+    show tina inactive_normal at midleft
+    show tony down at midright
 
     to "Nah, don’t worry. They’ll never suspect that there are two funny little dudes living in a bunch of arcade machines."
 
+    hide tony down
+    show tony inactive_down at midright
+    show tina normal at midleft
+
     ti "True. Afterall, it’s been quite a while since we’ve last made our presence known to a person."
+
+    hide tina normal
+    show tina inactive_normal at midleft
+    show tony down at midright
 
     to "Here, let’s turn off the lights. That’ll really send ‘em."
 
+    hide tony down
+    show tony inactive_down at midright
+    show tina normal at midleft
+
     ti "Oh, I don’t know, I think that might be going a bit too-"
+
+    hide tina normal
+    show tina inactive_normal at midleft
 
     pc "EEK!"
 
     pc "W-WHY DID THE LIGHTS TURN OFF!?"
 
     pc "OH GOD OH FUCK THIS PLACE REALLY IS A CREEPYPASTA AINT IT."
+
+    hide tina inactive_normal
+    show tina normal at midleft
 
     ti "What’s a creepypasta?"
 
@@ -518,5 +587,12 @@ label act3:
         ti "…it’s not like I like them or anything though…"
     else:
         to "Hm…that human wasn’t half bad. I hope they come by often…"
+
+    scene black
+    with fade
+
+    show text "Nik Thomas, Parmpreet Gill, Stevie Rodriguez - Writing \n Annie Zhang, Tiana Chamsi - Character Art \n Andrew Dunne - Background Art \n Joshua Augenstein - Programming \n Autumn Moulios - Music" at truecenter
+
+    "Thank you for playing!"
 
     return
