@@ -65,16 +65,12 @@ label start:
 
     play music masks
 
-    show tina normal at midleft
-    with dissolve
-
     "It’s only been a few days since I moved to the city, but I’d be lying if I said I was enjoying it."
 
     "After spending all of my time being bored out of my mind in my room, I reluctantly decided to check out the area looking for something interesting."
 
     scene bg arcade nofilter
     with fade
-
 
     "After some stumbling around, I came across this neat arcade. I look through the window. Pink neon lights, fuzzy carpeting, and a shadowy, harrowing atmosphere. Perfect vibe for an arcade."
 
@@ -98,9 +94,11 @@ label start:
     to "Tina, what the hell is that noise? Don’t tell me… another guest? {w} {i}Sigh{/i}. {w} It’s been a few years since the last one. Can’t people give me some privacy? I just need to think of a way to get them out of here…"
 
     hide tony down
-    show tony inactive_down at midright
 
     "Okay… here we go. {w} Gamer Time."
+
+    hide tony inactive_down
+    hide tina inactive_normal
 
     "I familiarize myself with the controls. Spin and shoot. Got it. I quickly boost around the screen. Oh there’s the first alien ship! {w} I blast it down, turn the corner, and - BOOM! - straight into another ship. {w} Oops."
 
@@ -108,13 +106,22 @@ label start:
 
     "Okay… a few ships are down. Now’s my chance to make it to the end and - {w} DAMMIT! - one of the larger ships shoots me from behind. {w} That’s fine. I’ll just get more quarters…"
 
+    show tony down at midright
+
     to "Wow… this new player is… intriguing. Just watching them makes me lost for words…"
 
     to "they’re just so…"
 
     to "Terrible at Assterion! Maybe I’ll observe them for a bit from the shadows… I could use some entertainment."
 
-    ti "What’s that Tony? A new contender? Ooh, it will be fun to watch them try to reach the leaderboard. "
+    hide tony down
+    show tony inactive_down at midright
+    show tina normal at midleft
+
+    ti "What’s that Tony? A new contender? Ooh, it will be fun to watch them try to reach my high score."
+
+    hide tina normal
+    hide tony inactive_down
 
     "Narrator" "While Tony slithers away into the shadows, Tina squeezes herself underneath an arcade cabinet across from the Assterion cabinet."
 
@@ -128,26 +135,56 @@ label start:
 
     "Under my breath, I mutter that I’m determined to keep playing."
 
+
+
     "Tony/Tina" "Oh."
+
+    hide tina normal
+    hide tony inactive_down
 
     pc "And I WON’T LEAVE UNTIL I MASTER IT!"
 
+    show tina normal at midleft
+    show tony down at midright
+
     "Tony/Tina" "Oh no."
+
+    hide tina normal
+    hide tony down
+    with dissolve
 
     scene bg arcade no filter
     with fade
 
     pc "Gosh dangit!"
 
+    show tony down at midleft
+
     to "Jeez, how many quarters is that now?"
 
+    hide tony down
+    show tony inactive_down at midleft
+    show tina normal at midright
+
     ti "I don’t know. I lost count."
+
+    hide tina normal
+    show tina inactive_normal at midright
+    show tony down at midleft
 
     to "It’s a bit concerning, ain’t it? This person looks like they’re in college. That’s probably ramen money they've been pouring into the machine all this time."
 
     to "And to be honest, I’m kind of getting annoyed seeing them die at the same spot every time. You’d think they’d learn by now."
 
+    hide tony down
+    show tony inactive_down at midleft
+    show tina normal at midright
+
     ti "Should we stop them?"
+
+    hide tina normal
+    show tina inactive_normal
+    show tony up
 
     to "Maybe… Wait, I have an idea!"
 
