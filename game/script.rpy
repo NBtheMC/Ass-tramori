@@ -62,11 +62,8 @@ label start:
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-    
-    play music masks
 
-    show tina normal at midleft
-    with dissolve
+    play music masks
 
     "It’s only been a few days since I moved to the city, but I’d be lying if I said I was enjoying it."
 
@@ -74,7 +71,6 @@ label start:
 
     scene bg arcade nofilter
     with fade
-
 
     "After some stumbling around, I came across this neat arcade. I look through the window. Pink neon lights, fuzzy carpeting, and a shadowy, harrowing atmosphere. Perfect vibe for an arcade."
 
@@ -483,7 +479,7 @@ label act3:
     else:
         to "Hm…that human wasn’t half bad. I hope they come by often…"
         hide tony inactive_down
-    
+
     scene black
     with fade
 
