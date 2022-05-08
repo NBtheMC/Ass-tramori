@@ -2,10 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 5: invalid syntax
-    define to = Character("Tony", who_color="#769c69")
-             ^
-    
+File "game/script.rpy", line 699: if statement expects a non-empty block.
+    if tina:
+            ^
+
+File "game/script.rpy", line 701: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Thu Mar 31 15:15:29 2022
+Sat Apr  2 23:25:10 2022

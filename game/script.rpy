@@ -678,59 +678,131 @@ label act3:
 
     pc "Well, you mind showing me around? I bet you know all kinds of cool secrets about this place, right?"
 
+    if tina:
+        show tina blush
+    else:
+        show tony up
+
     c "Oh uhm…yeah sure. There’s no reason to hide from you anymore, so…"
 
     if tina:
+        show tina inactive_blush
         pc "Oh my…your antennae are lovely…"
+        show tina blush
     else:
+        show tony inactive_normal
         pc "Oh my…your antlers are lovely…"
+        show tony normal
 
     c "Ah…th-thanks…"
+
+    if tina:
+        show tina inactive_blush
+    else:
+        show tony inactive_normal
 
     pc "Hey, now that I can see you more clearly…do I know you from somewhere?"
 
     pc "Wait a minute…you’re in that game that I was playing just now, right? Assterion?"
 
     if tina:
+        show tina normal
         ti "Well, I was going to be…but I dipped out of it! I don’t really have the stomach for horror stuff, you know? …Guess that’s a little strange, huh?"
+        show tina inactive_normal
     else:
+        show tony down
         to "Yeah…that was just an acting gig though. There’s not a lot of work out there for someone like me, so I take what I can get. I promise, I’m really not that scary of a guy."
+        show tony inactive_down
 
     pc "That makes sense. You don’t really strike me as that kind of…person? Monster…?"
 
+    if tina:
+        show tina normal
+    else:
+        show tony down
+
     c "Monster is just fine!"
+
+    if tina:
+        show tina inactive_normal
+    else:
+        show tony inactive_down
 
     pc "Cool! Thanks for letting me know."
 
+    if tina:
+        show tina normal
+    else:
+        show tony down
+
     c "Hm…so you wanted to see some secrets, yeah? There’s a hidden hall down this way with a few machines at the end. Want me to show you the way?"
+
+    if tina:
+        show tina inactive_normal
+    else:
+        show tony inactive_down
 
     pc "Yeah! That sounds cool."
 
+    if tina:
+        show tina blush
+    else:
+        show tony up
+
     c "Alright! Here, take my hand. It’s dark in there, so I just want to make sure you don’t fall and hurt yourself."
+
+    if tina:
+        show tina inactive_blush
+    else:
+        show tony inactive_up
 
     pc "Th…thanks…"
 
     scene bg claw
     if tina:
-        show tina
+        show tina inactive_blush
     else:
-        show tony
+        show tony inactive_up
     with fade
 
     pc "Oh wow! These claw machines are awesome!"
 
+    if tina:
+        show tina blush
+    else:
+        show tony up
+
     c "Ah yeah…I’m no good at these ones though. I’ve never been able to get any of the big prizes."
+
+    if tina:
+        show tina inactive_blush
+    else:
+        show tony inactive_up
 
     pc "Well, do you want one?"
 
+    if tina:
+        show tina blush
+    else:
+        show tony up
+
     c "Oh I mean…sure! But how?"
+
+    if tina:
+        show tina inactive_blush
+    else:
+        show tony inactive_up
 
     pc "I wouldn’t say I’m too good at these either, but if it’s for you, I’ll definitely try my best to win you something! Which prize would you like?"
 
     if tina:
+        show tina blush
         ti "Gosh, you’re so sweet! Hm…how about those stuffed animals over there?"
+        show tina inactive_blush
     else:
+        show tony up
         to "Ah, I’m usually not that picky…maybe one of those stuffed animals?"
+        show tony inactive_up
 
     pc "Sure! Let’s see…"
 
@@ -739,29 +811,56 @@ label act3:
 
         "Tina leans close to you, as you both watch the claw grab onto your desired prize! By some miracle, it doesn’t let go, and the celebratory lights fill the room, reflecting in Tina’s twinkling eyes."
 
+        show tina blush
         ti "WHAAAT? How did you get it on the first try!?"
+        show tina inactive_blush
     else:
         "You insert a quarter into the claw machine. Aiming for the stuffed animal, you press the button, the claw descending upon a pile of prizes."
 
         "Tony leans close to you, as you both watch the claw grab onto your desired prize! By some miracle, it doesn’t let go, and the celebratory lights fill the room, reflecting in Tony’s twinkling eyes."
 
+        show tony up
         to "Dang, you got it on the first try? Guess I’m not much of a gamer…"
+        show tony inactive_normal
+
 
     pc "Heh, it’s just beginner's luck."
 
+    if tina:
+        show tina normal
+    else:
+        show tony down
+
     c "Wow…well, thank you!"
+
+    if tina:
+        show tina inactive_normal
+    else:
+        show tony inactive_down
 
     pc "No problem! I barely noticed while having all this fun with you, but it’s getting pretty late. I should get going soon."
 
+    if tina:
+        show tina blush
+    else:
+        show tony up
+
     c "You know…usually I don’t enjoy visitors, so I try and scare them away…but you’re free to come back whenever you’d like."
+
+    if tina:
+        show tina inactive_blush
+    else:
+        show tony inactive_up
 
     pc "In that case, I think you’ll be seeing a lot of me. I’ll stop by again tomorrow, see you then!"
 
     if tina:
+        show tina normal
         ti "Hehe, I had a lot of fun today! I gotta get this place cleaned up before the human comes tomorrow!"
-
+        show tina blush
         ti "…it’s not like I like them or anything though…"
     else:
+        show tony normal
         to "Hm…that human wasn’t half bad. I hope they come by often…"
 
     scene black
